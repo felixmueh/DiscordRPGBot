@@ -2,6 +2,8 @@ import discord
 import asyncio
 import DiscordRPGBot.Settings as Settings
 
+client = discord.Client()
+
 
 def launch_bot():
     client.run("REMOVED_DISCORD_TOKEN")

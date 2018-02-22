@@ -5,6 +5,11 @@ import Settings as Settings
 client = discord.Client()
 
 
+def pass_event_list(e):
+    global events
+    events = e
+
+
 def launch_bot():
     client.run("REMOVED_DISCORD_TOKEN")
 

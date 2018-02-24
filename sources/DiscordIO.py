@@ -10,7 +10,8 @@ m_handler = MessageHandler(client)
 c_handler = CommandHandler(client, m_handler)
 
 
-def launch_bot():
+def launch_bot(game):
+    c_handler.game = game
     client.run("REMOVED_DISCORD_TOKEN")
 
 
@@ -31,6 +32,3 @@ async def on_message(message):
 @client.event
 async def on_reaction_add(reaction, user):
     await c_handler.handle_reaction(reaction, user)
-
-
-launch_bot()
